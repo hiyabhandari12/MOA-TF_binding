@@ -18,8 +18,8 @@ Integrating RNA-seq, ChIP-seq, DAP-seq, and MOA-seq (chromatin accessibility) ac
 | Source | Details |
 |---|---|
 | Reference genome/annotation | B73v5 & Mo17 (for DAP-seq data)|
-| RNA-seq | SRA accessions [SRA accessions](https://www.ncbi.nlm.nih.gov/sra?LinkName=bioproject_sra_all&from_uid=1101486) , B73×W22 NAM lines, WW + DS conditions, 69 runs each (23 lines × 3 reps); replicate-averaged RPKM matrix |
+| RNA-seq | [SRA accessions](https://www.ncbi.nlm.nih.gov/sra?LinkName=bioproject_sra_all&from_uid=1101486) , B73×W22 NAM lines, WW + DS conditions, 69 runs each (23 lines × 3 reps); replicate-averaged RPKM matrix |
 | ChIP-seq peaks | 104 TFs [Tu et al.](https://iastate.app.box.com/v/maizegdb-public/folder/362580095877) |
-| DAP-seq peaks | 105 TFs (B73) + 191 TFs (Mo17, assembly GCA_022117705.1) | https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE275897 |
-| MOA-seq | [Data](https://www.nature.com/articles/s41588-025-02246-7#data-availability)|[Read Depth](https://drive.google.com/drive/folders/1sJDruZQT9sw0Gp858gIh8lgTiUO90yIw)|
+| DAP-seq peaks | 105 TFs (B73) + 191 TFs (Mo17, assembly GCA_022117705.1) https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE275897
+| MOA-seq | [Data](https://www.nature.com/articles/s41588-025-02246-7#data-availability) ; [Read Depth](https://drive.google.com/drive/folders/1sJDruZQT9sw0Gp858gIh8lgTiUO90yIw)
 
