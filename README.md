@@ -44,12 +44,12 @@ Files used: DAP-seq peak BED (105 B73), same MOA-seq/RPKM data as above.
 1. NAM×NAM bp-overlap consistency: mean = 0.57
 2. MOA–RPKM correlation (summed bp overlap): mean |r| = 0.151
 
-### 2. Drought-response analysis (ΔMOA vs. ΔRPKM)
+### 2. Drought-response analysis 
 Files used: MOA-seq bQTL "GenoOnly" read-depth set (25 genotypes, WW+DS), ChIP-seq union peak BED (104 TFs), WW and DS RPKM matrices built using FASTQ data from SRAs.
 
 Mean |r| = 0.175 at the population level 
 
-### 3. TF motifs and motif–RPKM correlation
+### 3. TF motif and motif–RPKM correlation
 Files used: combined TF motif database (104 ChIP-seq motifs), MOA-seq regions, RPKM matrix. 
 
 72 significant TF motifs (found using HOMER)tested (spanning both ChIP-seq- and DAP-seq-derived TFs). Mean |r| = 0.172 (read depth), 0.158 (peak presence/absence).
