@@ -41,6 +41,7 @@ NAM×NAM bp-overlap consistency: bp overlap mean = 0.75, binary overlap mean = 0
 **DAP-seq × MOA-seq × RPKM**
 Files used: DAP-seq peak BED (105 B73), same MOA-seq/RPKM data as above.
 | Method | Mean \|r\| |
+|---|---|
 |1. NAM×NAM bp-overlap consistency| 0.57|
 |2. MOA–RPKM correlation (summed bp overlap)| 0.151|
 
