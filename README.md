@@ -26,24 +26,28 @@
 ### 1. TF × accessibility × expression correlation
 
 **ChIP-seq × MOA-seq × RPKM**
+
 Files used: ChIP-seq peak BED (104 TFs), MOA-seq peaks/read depth per NAM genotype, RPKM matrix.
 
 NAM×NAM bp-overlap consistency: bp overlap mean = 0.75, binary overlap mean = 0.63
 
 | Method | Mean \|r\| |
 |---|---|
-| 1. Summed bp overlap vs. RPKM | 0.134 |
-| 2. Binary ≥50% overlap vs. RPKM | 0.141 |
-| 3. MOA-seq peak presence vs. RPKM | 0.145 |
-| 4. Central-window vs. RPKM | 0.150 / 0.152 / 0.151 |
+| 1. NAM×NAM bp-overlap/binary overlap consistency | 0.75/ 0.63 | 
+| 2. Summed bp overlap vs. RPKM | 0.134 |
+| 3. Binary ≥50% overlap vs. RPKM | 0.141 |
+| 4. MOA-seq peak presence vs. RPKM | 0.145 |
+| 5. Central-window vs. RPKM | 0.150 / 0.152 / 0.151 |
 
 
 **DAP-seq × MOA-seq × RPKM**
-Files used: DAP-seq peak BED (105 B73), same MOA-seq/RPKM data as above.
+
+Files used: DAP-seq peak BED (105 - B73), same MOA-seq/RPKM data as above.
 | Method | Mean \|r\| |
 |---|---|
 |1. NAM×NAM bp-overlap consistency| 0.57|
 |2. MOA–RPKM correlation (summed bp overlap)| 0.151|
+
 
 ### 2. Drought-response analysis 
 Files used: MOA-seq bQTL "GenoOnly" read-depth set (25 genotypes, WW+DS), ChIP-seq union peak BED (104 TFs), WW and DS RPKM matrices built using FASTQ data from SRAs.
