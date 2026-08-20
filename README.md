@@ -4,12 +4,12 @@
 
 - [Data](#data)
 - [Analysis](#analysis)
-  1. [TF × accessibility × expression correlation](#1-tf--accessibility--expression-correlation)
-  2. [Drought-response analysis](#2-drought-response-analysis-Δmoa-vs-Δrpkm)
-  3. [TF motif database and motif–RPKM correlation](#3-tf-motif-database-and-motif–rpkm-correlation)
-  4. [Genotype clustering](#4-genotype-clustering-2mp-dataset)
-  5. [Motif enrichment and discovery across clusters](#5-motif-enrichment-and-discovery-across-clusters)
-  6. [Downstream gene assignment](#6-downstream-gene-assignment)
+  1. TF × accessibility × expression correlation
+  2. Drought-response analysis
+  3. TF motif database and motif–RPKM correlation
+  4. Genotype clustering
+  5. Motif enrichment and discovery across clusters
+  6. Downstream gene assignment
 
 ## Data
 
