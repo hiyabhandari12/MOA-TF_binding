@@ -64,8 +64,11 @@ Files used: DAP-seq peak BED (105 TFs - B73), same MOA-seq/RPKM data as above.
 **Files used:** TF motif database (104 ChIP-seq motifs), MOA-seq regions, RPKM matrix.
 
 **Result:** 72 significant TF motifs (found using HOMER) tested, spanning ChIP-seq derived TF motifs.
-- Mean |r| = 0.172 (read depth)
-- Mean |r| = 0.158 (peak presence/absence)
+
+| Method                          | Mean \|r\| |
+|----------------------------------|------------|
+| RPKM vs. Read depth                       | 0.172      |
+| RPKM vs. Peak presence/absence            | 0.158      |
 
 <a id="analysis-4"></a>
 ### 4. Genotype clustering (2MP dataset)
