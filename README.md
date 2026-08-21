@@ -4,14 +4,14 @@
 
 - [Data](#data)
 - [Analysis](#analysis)
-  1. TF × accessibility × expression correlation
-     - ChIP-seq × MOA-seq × RPKM
-     - DAP-seq × MOA-seq × RPKM
-  2. Drought-response analysis
-  3. TF motif database and motif–RPKM correlation
-  4. Genotype clustering
-  5. Motif enrichment and discovery across clusters
-  6. Downstream gene assignment
+  1. [TF × accessibility × expression correlation](#analysis-1)
+     - [ChIP-seq × MOA-seq × RPKM](#analysis-1-chip-seq)
+     - [DAP-seq × MOA-seq × RPKM](#analysis-1-dap-seq)
+  2. [Drought-response analysis](#analysis-2)
+  3. [TF motif database and motif–RPKM correlation](#analysis-3)
+  4. [Genotype clustering](#analysis-4)
+  5. [Motif enrichment and discovery across clusters](#analysis-5)
+  6. [Downstream gene assignment](#analysis-6)
 
 ## Data
 
@@ -25,8 +25,10 @@
 
 ## Analysis
 
+<a id="analysis-1"></a>
 ### 1. TF × accessibility × expression correlation
 
+<a id="analysis-1-chip-seq"></a>
 #### ChIP-seq × MOA-seq × RPKM
 
 Files used: ChIP-seq peak BED (104 TFs), MOA-seq peaks/read depth per NAM genotype, RPKM matrix.
@@ -39,6 +41,7 @@ Files used: ChIP-seq peak BED (104 TFs), MOA-seq peaks/read depth per NAM genoty
 | 4. MOA-seq peak presence vs. RPKM                     | 0.145         |
 | 5. Central-window vs. RPKM                            | 0.150 / 0.152 / 0.151 |
 
+<a id="analysis-1-dap-seq"></a>
 #### DAP-seq × MOA-seq × RPKM
 
 Files used: DAP-seq peak BED (105 TFs - B73), same MOA-seq/RPKM data as above.
@@ -48,12 +51,14 @@ Files used: DAP-seq peak BED (105 TFs - B73), same MOA-seq/RPKM data as above.
 | 1. NAM×NAM bp-overlap consistency          | 0.57       |
 | 2. MOA–RPKM correlation (summed bp overlap)| 0.151      |
 
+<a id="analysis-2"></a>
 ### 2. Drought-response analysis
 
 **Files used:** MOA-seq bQTL "GenoOnly" read-depth set (25 genotypes, WW+DS), ChIP-seq union peak BED (104 TFs), WW and DS RPKM matrices built using FASTQ data from SRAs.
 
 **Result:** Mean |r| = 0.175 at the population level.
 
+<a id="analysis-3"></a>
 ### 3. TF motif and motif–RPKM correlation
 
 **Files used:** combined TF motif database (104 ChIP-seq motifs), MOA-seq regions, RPKM matrix.
@@ -62,6 +67,7 @@ Files used: DAP-seq peak BED (105 TFs - B73), same MOA-seq/RPKM data as above.
 - Mean |r| = 0.172 (read depth)
 - Mean |r| = 0.158 (peak presence/absence)
 
+<a id="analysis-4"></a>
 ### 4. Genotype clustering (2MP dataset)
 
 **Files used:** 25 NAM MOA-seq genotype files.
@@ -71,6 +77,7 @@ Files used: DAP-seq peak BED (105 TFs - B73), same MOA-seq/RPKM data as above.
 - Dominant patterns were all-1s (~27%) and all-0s, removed before clustering (571K variable positions remained)
 - k-modes at k=2000 produced 2,002 clusters; BED files generated for each cluster
 
+<a id="analysis-5"></a>
 ### 5. Motif enrichment and discovery across clusters
 
 **Files used:** 2,002 cluster BED files (400 motifs: 104 ChIP-seq + 105 B73 DAP-seq + 191 Mo17 DAP-seq).
@@ -80,6 +87,7 @@ Files used: DAP-seq peak BED (105 TFs - B73), same MOA-seq/RPKM data as above.
 - Filtered (q < 0.05 & ≥50% target) down to 48 plant-TF motifs
 - Cross-referenced against known motifs: 38 with no known TF hit
 
+<a id="analysis-6"></a>
 ### 6. Downstream gene assignment
 
 **Files used:** B73v5 gene BED file (converted from GFF3, 39,756 genes), the 38 novel-cluster BED files from section 5.
