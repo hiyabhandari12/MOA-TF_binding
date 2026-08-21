@@ -54,16 +54,16 @@ Files used: DAP-seq peak BED (105 TFs - B73), same MOA-seq/RPKM data as above.
 <a id="analysis-2"></a>
 ### 2. Drought-response analysis
 
-**Files used:** MOA-seq bQTL "GenoOnly" read-depth set (25 genotypes, WW+DS), ChIP-seq union peak BED (104 TFs), WW and DS RPKM matrices built using FASTQ data from SRAs.
+**Files used:** MOA-seq read-depth set (25 genotypes, WW+DS), ChIP-seq union peak BED (104 TFs), WW and DS RPKM matrices built using FASTQ data from SRAs.
 
-**Result:** Mean |r| = 0.175 at the population level.
+**Result:** Mean |r| = 0.175 
 
 <a id="analysis-3"></a>
 ### 3. TF motif and motif–RPKM correlation
 
-**Files used:** combined TF motif database (104 ChIP-seq motifs), MOA-seq regions, RPKM matrix.
+**Files used:** TF motif database (104 ChIP-seq motifs), MOA-seq regions, RPKM matrix.
 
-**Result:** 72 significant TF motifs (found using HOMER) tested, spanning both ChIP-seq- and DAP-seq-derived TFs.
+**Result:** 72 significant TF motifs (found using HOMER) tested, spanning ChIP-seq derived TF motifs.
 - Mean |r| = 0.172 (read depth)
 - Mean |r| = 0.158 (peak presence/absence)
 
@@ -74,7 +74,7 @@ Files used: DAP-seq peak BED (105 TFs - B73), same MOA-seq/RPKM data as above.
 
 **Result:**
 - 226,627 unique binary patterns found across 813,590 shared positions
-- Dominant patterns were all-1s (~27%) and all-0s, removed before clustering (571K variable positions remained)
+- Dominant patterns were all-1s and all-0s, removed before clustering (571K variable positions remained)
 - k-modes at k=2000 produced 2,002 clusters; BED files generated for each cluster
 
 <a id="analysis-5"></a>
