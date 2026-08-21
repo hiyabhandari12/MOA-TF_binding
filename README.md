@@ -41,6 +41,13 @@ Files used: ChIP-seq peak BED (104 TFs), MOA-seq peaks/read depth per NAM genoty
 | 4. MOA-seq peak presence vs. RPKM                     | 0.145         |
 | 5. Central-window vs. RPKM                            | 0.150 / 0.152 / 0.151 |
 
+**Method notes:**
+1. bp-overlap value (0.75): pairwise Pearson R of summed bp-overlap across genotype pairs, averaged per TF then across 104 TFs. Binary-overlap value (0.63): same pairwise design on a binarized peak-presence matrix, but using squared Pearson R (R²) averaged per TF and across TFs
+2. Summed bp overlap in each of the NAM lines and correlated against the RPKM
+3. Per TF, Pearson-correlates a ≥50%-overlap-thresholded peak count against RPKM across genotypes.
+4. A single genome-wide peak-presence (summed peak count per genotype, independent of TF identity), Spearman-correlated against each TF's own RPKM across genotypes.
+5. Summed-bp-overlap-vs-RPKM design as row 2, restricted to a fixed window (20/50/100bp respectively) centered on each ChIP peak; Spearman, per TF across genotypes.
+
 <a id="analysis-1-dap-seq"></a>
 #### DAP-seq × MOA-seq × RPKM
 
@@ -51,10 +58,16 @@ Files used: DAP-seq peak BED (105 TFs - B73), same MOA-seq/RPKM data as above.
 | 1. NAM×NAM bp-overlap consistency          | 0.57       |
 | 2. MOA–RPKM correlation (summed bp overlap)| 0.151      |
 
+**Method notes:**
+1. Pairwise-Pearson-R design as the ChIP-seq bp-overlap value, on the DAP bp-overlap matrix, averaged across 105 TFs.
+2. Per TF, summed bp overlap vs. RPKM, Spearman across genotypes.
+
 <a id="analysis-2"></a>
 ### 2. Drought-response analysis
 
 **Files used:** MOA-seq read-depth set (25 genotypes, WW+DS), ChIP-seq union peak BED (104 TFs), WW and DS RPKM matrices built using FASTQ data from SRAs.
+
+**Method:** Per TF, per genotype, computed delta_MOA = log2FC(DS vs WW) of summed MOA read depth at that TF's bQTLs, and delta_RPKM = log2FC(DS vs WW) of RPKM. Within each TF (n≥3 genotypes), computed the Spearman correlation between delta_MOA and delta_RPKM across genotypes, then averaged |r| across the 96 testable TFs — testing whether drought-induced changes in binding track drought-induced changes in expression, rather than static levels.
 
 **Result:** Mean |r| = 0.175 
 
@@ -67,8 +80,12 @@ Files used: DAP-seq peak BED (105 TFs - B73), same MOA-seq/RPKM data as above.
 
 | Method                          | Mean \|r\| |
 |----------------------------------|------------|
-| RPKM vs. Read depth                       | 0.172      |
-| RPKM vs. Peak presence/absence            | 0.158      |
+| 1. RPKM vs. Read depth                       | 0.172      |
+| 2. RPKM vs. Peak presence/absence            | 0.158      |
+
+**Method notes:**
+1. For each of the significant motifs, averages MOA-seq read depth across positions falling inside that motif's HOMER-called peak regions per genotype, then Spearman-correlates against RPKM across 21 shared genotypes.
+2. Same design, using binary peak presence/absence (instead of continuous read depth) at those positions.
 
 <a id="analysis-4"></a>
 ### 4. Genotype clustering (2MP dataset)
