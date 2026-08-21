@@ -50,30 +50,38 @@ Files used: DAP-seq peak BED (105 TFs - B73), same MOA-seq/RPKM data as above.
 
 ### 2. Drought-response analysis
 
-Files used: MOA-seq bQTL "GenoOnly" read-depth set (25 genotypes, WW+DS), ChIP-seq union peak BED (104 TFs), WW and DS RPKM matrices built using FASTQ data from SRAs.
+**Files used:** MOA-seq bQTL "GenoOnly" read-depth set (25 genotypes, WW+DS), ChIP-seq union peak BED (104 TFs), WW and DS RPKM matrices built using FASTQ data from SRAs.
 
-Mean |r| = 0.175 at the population level
+**Result:** Mean |r| = 0.175 at the population level.
 
 ### 3. TF motif and motif–RPKM correlation
 
-Files used: combined TF motif database (104 ChIP-seq motifs), MOA-seq regions, RPKM matrix.
+**Files used:** combined TF motif database (104 ChIP-seq motifs), MOA-seq regions, RPKM matrix.
 
-72 significant TF motifs (found using HOMER) tested (spanning both ChIP-seq- and DAP-seq-derived TFs). Mean |r| = 0.172 (read depth), 0.158 (peak presence/absence).
+**Result:** 72 significant TF motifs (found using HOMER) tested, spanning both ChIP-seq- and DAP-seq-derived TFs.
+- Mean |r| = 0.172 (read depth)
+- Mean |r| = 0.158 (peak presence/absence)
 
 ### 4. Genotype clustering (2MP dataset)
 
-Files used: 25 NAM MOA-seq genotype files.
+**Files used:** 25 NAM MOA-seq genotype files.
 
-226,627 unique binary patterns found across 813,590 shared positions; dominant patterns were all-1s (~27%) and all-0s, removed before clustering (571K variable positions remained). k-modes at k=2000 produced 2,002 clusters, further generated BED files for each cluster.
+**Result:**
+- 226,627 unique binary patterns found across 813,590 shared positions
+- Dominant patterns were all-1s (~27%) and all-0s, removed before clustering (571K variable positions remained)
+- k-modes at k=2000 produced 2,002 clusters; BED files generated for each cluster
 
 ### 5. Motif enrichment and discovery across clusters
 
-Files used: 2,002 cluster BED files (400 motifs: 104 ChIP-seq + 105 B73 DAP-seq + 191 Mo17 DAP-seq).
+**Files used:** 2,002 cluster BED files (400 motifs: 104 ChIP-seq + 105 B73 DAP-seq + 191 Mo17 DAP-seq).
 
-De novo discovery: 44,440 motifs found, filtered down (q < 0.05 & ≥50% target) to 48 plant-TF motifs. Cross-referencing against known motifs: 38 with no known TF hit.
+**Result:**
+- De novo discovery: 44,440 motifs found
+- Filtered (q < 0.05 & ≥50% target) down to 48 plant-TF motifs
+- Cross-referenced against known motifs: 38 with no known TF hit
 
 ### 6. Downstream gene assignment
 
-Files used: B73v5 gene BED file (converted from GFF3, 39,756 genes), the 38 novel-cluster BED files from section 5.
+**Files used:** B73v5 gene BED file (converted from GFF3, 39,756 genes), the 38 novel-cluster BED files from section 5.
 
-1,218 unique gene-cluster associations within 10kb across the 38 novel clusters.
+**Result:** 1,218 unique gene-cluster associations within 10kb across the 38 novel clusters.
