@@ -43,7 +43,7 @@ Files used: ChIP-seq peak BED (104 TFs), MOA-seq peaks/read depth per NAM genoty
 
 **Method notes:**
 1. bp-overlap value (0.75): pairwise Pearson R of summed bp-overlap across genotype pairs, averaged per TF then across 104 TFs. Binary-overlap value (0.63): same pairwise design on a binarized peak-presence matrix, but using squared Pearson R (R²) averaged per TF and across TFs
-2. Summed bp overlap in each of the NAM lines and correlated against the RPKM
+2. Per TF, summed bp overlap across genotypes correlated against RPKM   
 3. Per TF, Pearson-correlates a ≥50%-overlap-thresholded peak count against RPKM across genotypes.
 4. A single genome-wide peak-presence (summed peak count per genotype, independent of TF identity), Spearman-correlated against each TF's own RPKM across genotypes.
 5. Summed-bp-overlap-vs-RPKM design as row 2, restricted to a fixed window (20/50/100bp respectively) centered on each ChIP peak; Spearman, per TF across genotypes.
